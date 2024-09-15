@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyPortfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body id="nav1">
+    <header class="header">
+        <a href="index.html" class="logo"><span class="span1">Port</span><span class="span2">folio.</span></a>
+        <button id="menu-icon">
+            <i id="IE" class="bx bx-menu"></i>
+        </button>
+        <nav class="navbar">
+            <a href="index.html" style="--i:1">Home</a>
+            <a href="about.html" style="--i:2">About</a>
+            <a href="projects.html" style="--i:3">Projects</a>
+            <a href="contact.html" style="--i:4" class="active">Contact</a>
+        </nav>
+    </header>
+    <div class="contact">
+        <div class="contact-form">
+            <h2>Get in touch</h2>
+            <form action="https://formsubmit.co/12faffc3124c86e3accacd9fc72b336d" method="POST">
+                <div class="input-box">
+                    <input class="right" type="text" name="name" placeholder="Name" required>
+                    <input class="left" type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="content">
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    <textarea name="message" placeholder="Message" rows="4" required></textarea>
+                    <button type="submit">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+<script src="script.js"></script>
+
+</html>
