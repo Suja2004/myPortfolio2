@@ -29,7 +29,7 @@
 
 body {
     color: #000000;
-    overflow: hidden;
+    overflow-x: hidden;
     font-family: 'Poppins', 'sans-serif';
 }
 
@@ -68,11 +68,11 @@ a {
 }
 
 .span1 {
-    color: #3cf;
+    color: #007BFF;
 }
 
 .span2 {
-    color: #f06;
+    color: #3cf;
 }
 
 .navbar a {
@@ -140,6 +140,7 @@ p {
 
 .home-content a {
     color: #fff;
+    font-size: 1rem;
 }
 
 .btn {
@@ -329,6 +330,7 @@ p {
     flex-direction: column;
     align-items: center;
     padding: 60px;
+    margin: 8% 15%;
 }
 
 .skill-container {
@@ -407,14 +409,14 @@ p {
 
 /* projects.html */
 .projects {
-    margin-top: 100px;
+    margin:100px 15% ;
     height: 100%;
 }
 .project{
     display: grid;
     gap: 3rem;
     grid-auto-flow: column;
-    padding: 4rem 2rem;
+    padding: 4rem 4rem;
     grid-auto-columns: 250px;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
@@ -427,16 +429,6 @@ p {
     box-shadow: 0 16px 8px rgba(0, 0, 0, 0.1);
     animation: slideLeft 1s ease forwards;
 }
-
-/* .project-grid {
-    width: 800px;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    animation: slideLeft 1s ease forwards;
-} */
-
 
 .project-grid p {
     font-size: 14px;
@@ -454,16 +446,11 @@ p {
     color: #007bff;
 }
 
-.project-grid:hover{
-    transform: scale(1.2);
-}
-
 /* contact.html */
 .contact {
     display: flex;
     justify-content: center;
-    width: 100%;
-    margin-top: 7%;
+    margin: 7% 15%;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
@@ -519,7 +506,7 @@ p {
 .contact-form button {
     width: 100%;
     padding: 14px;
-    background-color:#3cf;
+    background-color:rgba(51, 204, 255, 0.745);
     color: white;
     border: none;
     border-radius: 8px;
@@ -565,6 +552,7 @@ p {
         font-size: 1rem;
         font-weight: 600;
         padding: 2px 0;
+        margin-left: 0;
     }
 
     .home {
@@ -616,7 +604,8 @@ p {
 
     .contact {
         width: 100%;
-        margin: 90px 0;
+        margin: 0;
+        margin-top: 15%;
     }
 
     .contact-form input[type="text"],
