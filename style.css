@@ -245,7 +245,7 @@ p {
     transition: .5s ease;
 }
 
-.home-sci a:hover{
+.home-sci a:hover {
     color: #fff;
 }
 
@@ -409,25 +409,31 @@ p {
 
 /* projects.html */
 .projects {
-    margin:100px 15% ;
+    margin: 100px 15%;
     height: 100%;
 }
-.project{
+
+.project {
     display: grid;
-    gap: 3rem;
+    gap: 4rem;
     grid-auto-flow: column;
-    padding: 4rem 4rem;
+    padding: 4rem 0;
     grid-auto-columns: 250px;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
 }
 
-.project-grid{
+.project-grid {
     border-radius: 10px;
     inline-size: 100%;
     padding: 1rem;
     box-shadow: 0 16px 8px rgba(0, 0, 0, 0.1);
     animation: slideLeft 1s ease forwards;
+}
+
+.project-grid:hover {
+    box-shadow: 0 16px 16px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
 }
 
 .project-grid p {
@@ -446,18 +452,70 @@ p {
     color: #007bff;
 }
 
+.scroll-indicator {
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    height: 4px;
+    background-color: #007bff;
+    width: 0;
+    transition: width 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project-grid {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.project-grid.visible {
+    animation: fadeIn 1.2s forwards;
+}
+
+.project-grid.hidden {
+    animation: fadeOut 1.2s forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+
+
 /* contact.html */
 .contact {
     display: flex;
     justify-content: center;
     margin: 7% 15%;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
 }
 
 .contact-form {
     width: 80%;
     padding: 30px;
     background-color: #fff;
+    border-radius: 8px;
 }
 
 .contact-form h2 {
@@ -467,46 +525,46 @@ p {
     animation: slideBottom 1s ease forwards;
 }
 
-.right{
+.right,
+.left {
+    width: 48%;
     animation: slideRight 1s ease forwards;
 }
-.left{
+
+.left {
     animation: slideLeft 1s ease forwards;
-}
-.content{
-    animation: slideTop 1s ease forwards;
 }
 
 .contact-form .input-box {
     display: flex;
     justify-content: space-between;
+    gap: 2%;
+}
+
+
+.contact-form input[type="text"],
+.contact-form input[type="email"] {
+    width: 95%;
+}
+
+.contact-form textarea {
+    resize: none;
 }
 
 .contact-form input,
 .contact-form textarea {
-    width: 100%;
+    width: 95%;
     padding: 12px;
-    margin: 10px 20px;
+    margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 15px;
-
-}
-
-.contact-form input[type="text"] {
-    width: 50%;
-}
-
-.contact-form textarea,
-.contact-form input[type="email"] {
-    width: 80%;
-    resize: none;
 }
 
 .contact-form button {
     width: 100%;
     padding: 14px;
-    background-color:rgba(51, 204, 255, 0.745);
+    background-color: rgba(51, 204, 255, 0.745);
     color: white;
     border: none;
     border-radius: 8px;
@@ -516,7 +574,7 @@ p {
 }
 
 .contact-form button:hover {
-    background-color:#3cf;
+    background-color: #3cf;
 }
 
 /* ******************* */
@@ -602,19 +660,42 @@ p {
         margin: 10px;
     }
 
-    .contact {
-        width: 100%;
-        margin: 0;
-        margin-top: 15%;
+    .project {
+        grid-auto-flow: row;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem;
     }
+
+    .projects {
+        margin: 50px 5%;
+    }
+
+    .contact {
+        margin: 13% 5%;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .input-box {
+        flex-direction: column;
+    }
+
+    .right,
+    .left {
+        width: 100%;
+    }
+
 
     .contact-form input[type="text"],
     .contact-form input[type="email"] {
-        width: 80%;
+        width: 95%;
     }
 
     .contact-form textarea {
-        resize: none;
+        width: 95%;
     }
 
     .show {
