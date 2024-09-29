@@ -76,7 +76,7 @@ a {
 }
 
 .navbar a {
-    color: #f06;
+    color: #007BFF;
     display: inline-block;
     font-size: 18px;
     font-weight: 600;
@@ -333,6 +333,10 @@ p {
     margin: 8% 15%;
 }
 
+.about h1 {
+    color: #3cf;
+}
+
 .skill-container {
     display: flex;
     font-size: 2.5rem;
@@ -411,6 +415,10 @@ p {
 .projects {
     margin: 100px 15%;
     height: 100%;
+    
+    h1 {
+        color: #3cf;
+    }
 }
 
 .project {
@@ -462,18 +470,6 @@ p {
     transition: width 0.2s ease;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 .project-grid {
     opacity: 0;
     transform: translateY(20px);
@@ -488,25 +484,11 @@ p {
     animation: fadeOut 1.2s forwards;
 }
 
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    to {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-}
-
-
-
 /* contact.html */
 .contact {
     display: flex;
     justify-content: center;
-    margin: 7% 15%;
+    margin: 120px 15%;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     background-color: #f9f9f9;
 }
@@ -668,35 +650,88 @@ p {
     }
 
     .projects {
-        margin: 50px 5%;
+        margin: 120px 5%;
+
     }
 
     .contact {
-        margin: 13% 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 15% 0;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        background-color: #f9f9f9;
     }
 
     .contact-form {
+        width: 90%;
+        max-width: 500px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        margin: 0 auto;
+    }
+
+    .contact-form h2 {
+        margin-bottom: 15px;
+        font-size: 20px;
+        color: #333;
+        animation: slideBottom 1s ease forwards;
+    }
+
+    .left,
+    .right {
         width: 100%;
     }
 
-    .input-box {
+    .contact-form .input-box {
+        display: flex;
         flex-direction: column;
+        gap: 10px;
     }
-
-    .right,
-    .left {
-        width: 100%;
-    }
-
 
     .contact-form input[type="text"],
-    .contact-form input[type="email"] {
-        width: 95%;
+    .contact-form input[type="email"],
+    .contact-form textarea {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 15px;
+        box-sizing: border-box;
     }
 
     .contact-form textarea {
-        width: 95%;
+        resize: none;
     }
+
+    .contact-form button {
+        width: 100%;
+        padding: 14px;
+        background-color: rgba(51, 204, 255, 0.745);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 10px;
+    }
+
+    .contact-form button:hover {
+        background-color: #3cf;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+
+    .contact {
+        padding: 10px;
+    }
+
 
     .show {
         .navbar {
@@ -807,5 +842,29 @@ p {
 
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(20px);
     }
 }

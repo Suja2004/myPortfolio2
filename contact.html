@@ -9,7 +9,6 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
-
 <body id="nav1">
     <header class="header">
         <a href="index.html" class="logo"><span class="span1">Port</span><span class="span2">folio.</span></a>
@@ -28,7 +27,7 @@
             <h2>Get in touch</h2>
             <form action="https://formsubmit.co/12faffc3124c86e3accacd9fc72b336d" method="POST">
                 <div class="input-box">
-                    <input class="right" type="text" name="name" placeholder="Name" required>
+                    <input class="right" id="firstInput" type="text" name="name" placeholder="Name" required>
                     <input class="left" type="email" name="email" placeholder="Email" required>
                 </div>
                 <div class="content">
@@ -40,7 +39,12 @@
         </div>
     </div>
 
-
+    <script>
+        window.onload = function() {
+            document.getElementById('firstInput').focus();
+        };
+    </script>
+    
 </body>
 <script src="script.js"></script>
 

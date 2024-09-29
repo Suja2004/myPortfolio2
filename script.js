@@ -12,14 +12,6 @@ menubar.addEventListener("click", function () {
     }
 });
 
-document.querySelector('.project').addEventListener('wheel', (event) => {
-    event.preventDefault();
-    document.querySelector('.project').scrollBy({
-        left: event.deltaY < 0 ? -100 : 100,
-        behavior: 'smooth'
-    });
-});
-
 const projects = document.querySelectorAll('.project-grid');
 
 
@@ -40,16 +32,6 @@ projects.forEach((project) => {
 });
 
 
-const projectContainer = document.querySelector('.project');
-const indicator = document.createElement('div');
-indicator.classList.add('scroll-indicator');
-document.body.appendChild(indicator);
-
-projectContainer.addEventListener('scroll', () => {
-  const maxScroll = projectContainer.scrollWidth - projectContainer.clientWidth;
-  const scrollPercentage = (projectContainer.scrollLeft / maxScroll) * 100;
-  indicator.style.width = `${scrollPercentage}%`;
-});
 
 const inputs = document.querySelectorAll('.contact-form input, .contact-form textarea');
 
